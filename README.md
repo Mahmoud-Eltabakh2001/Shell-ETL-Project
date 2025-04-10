@@ -1,11 +1,40 @@
+# README for Shell-ETL-Project
+# Project Title:
 # Shell-ETL-Project
-
-Objectives
-
+# Project Description:
+# A command-line project for extracting, transforming, and loading data
+# Objectives:
 - Extract data from a delimited file.
 - Transform text data.
 - Load data into a database using shell commands.
 
+# Files and Folders:
+- web-server-access-log.txt.gz: The original data file.
+- access_log.csv: The transformed file after converting the delimiter.
+- cp-access-log.sh: The script file to run the project.
+
+# How to Run the Project:
+1. Download the web-server-access-log.txt.gz file from the specified URL.
+2. Run the cp-access-log.sh file using the command ./cp-access-log.sh.
+3. The script will extract the .txt file, convert the delimiter, and load the data into a PostgreSQL database.
+
+# Requirements:
+- wget: To download the file from the specified URL.
+- gunzip: To extract the .txt file from the .gz file.
+- cut: To extract specific columns from .txt file.
+- tr: To convert the delimiter.
+- psql: To load the data into a PostgreSQL database.
+
+# Configuration:
+- Replace username with the database username.
+- Replace database with the database name.
+- Replace access_log with the table name in the database.
+
+# Notes:
+- This project was created to demonstrate how to use shell commands to extract, transform, and load data.
+- You can modify the project to suit your specific needs.
+
+  
 This script downloads the file 'web-server-access-log.txt.gz'
 from "https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DB0250EN-SkillsNetwork/labs/Bash%20Scripting/ETL%20using%20shell%20scripting/".
 
